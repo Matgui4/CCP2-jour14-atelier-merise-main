@@ -1,0 +1,15 @@
+Users: num_user, name, password, created_at, updated_at
+Has, 0N Users, 0N> Orders
+:
+Products: num_product, name,quantity,status, created_at, updated_at
+Add, 01 Products, 0N> Orders
+:
+
+Categories: num_category, name, created_at, updated_at
+To, 1N Categories, 1N> Products
+:
+Tags: num_tag, name, created_at, updated_at
+Vers_Linfini, 0N Tags, 1N> Products
+:
+Orders: num_order, XX_Entité_1_propriété1, XX_Entité_2_propriété2, num_invoice, status, created_at, updated_at
+Et_Laudela, 0N Orders, 0N> Products

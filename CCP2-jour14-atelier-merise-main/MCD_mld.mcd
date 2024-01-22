@@ -1,0 +1,23 @@
+%%mocodo
+:::
+Users: num_user, name, password, created_at, updated_at
+:
+Has: #num_user > Users > num_user, _#num_order > Orders > num_order
+:::
+Products: num_product, name, quantity, status, created_at, updated_at, #num_order > Orders > num_order
+:::::
+
+
+:
+Categories: num_category, name, created_at, updated_at
+:
+To: #num_category > Categories > num_category, _#num_product > Products > num_product
+:::
+Tags: num_tag, name, created_at, updated_at
+:
+Vers_Linfini: #num_tag > Tags > num_tag, _#num_product > Products > num_product
+:
+Orders: num_order, XX_Entité_1_propriété1, XX_Entité_2_propriété2, num_invoice, status, created_at, updated_at
+:
+Et_Laudela: #num_order > Orders > num_order, _#num_product > Products > num_product
+:
